@@ -1,0 +1,78 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Dosis:500');
+body, H1{
+    font-family: 'dosis', sans-serif;
+}
+body, HTML{
+    height: 100%;
+    margin: 0;
+}
+.bgimg{
+    background-image: url(bg.jpg);
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.main-box{
+    position: absolute;
+    height: 98vh;
+    width: 98vw;
+    background-color: rgba(255, 255, 255, 0);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.uc-box{
+    position: relative;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;   
+}
+
+.bor{
+    border-color: gray;
+}
+
+h1{
+    position: relative;
+    display: inline-block;
+    font-size: 8vw;
+    color: rgba(0, 0, 200, 0.7);
+}
+
+h1::after, h1::before{
+    
+    content: attr(text);
+    position: absolute;
+    z-index: 5;
+    left:0;
+    mix-blend-mode: multiply;
+}
+h1::before{
+    transform:translateX(-5px);
+    color: rgba(200, 0, 0, .7);
+}
+h1::after{
+    transform:translateX(5px);
+    color: rgba(0, 200, 0, .7);
+}
+
+.opac-ani{
+    animation: opac 2s;
+}
+
+
+@keyframes opac{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+
